@@ -1,28 +1,15 @@
-/**
- * generate by AAMVVM: https://github.com/HeadingMobile/AAMVVM
- */
 package ${packageName};
 
-import ${superClassFqcn};
-<#if generateViewModel>
+import android.os.Bundle
 import ${packageName}.viewmodel.${shortName}ViewModel;
-</#if>  
 
 /**
  * description: ${activityClass}
- <#if generateViewModel>
  * @see ${shortName}ViewModel
- </#if>
  *
  * @date ${.now?string("yyyy/MM/dd")}
  */
-
-public class ${activityClass} extends BaseActivity<${activityClass}Binding>{
-
-    <#if generateViewModel>
-    private ${shortName}ViewModel  mViewModel;
-    </#if> 
-
+public class ${activityClass} extends BaseActivity<${viewmodelName}, Activity${shortName}Binding>{
 
     @Override 
     public int getLayoutId() {
@@ -30,15 +17,14 @@ public class ${activityClass} extends BaseActivity<${activityClass}Binding>{
     }
 
     @Override 
-    public void initView() {
-        <#if generateViewModel>
-        //mViewModel = initViewModel()
-        getMBinding.setVm(mViewModel);
-        </#if>
+    public void initView(Bundle savedInstanceState) {
+      
     }
 
     @Override
-    public void loadData(boolean isRefresh){}
+    public void loadData(){
+
+    }
 
 }
 

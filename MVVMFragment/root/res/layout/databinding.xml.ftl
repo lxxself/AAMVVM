@@ -2,17 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <#if generateViewModel>
     	<variable
-                name="vm"
-                type="${packageName}.viewmodel.${viewmodelName}"/>
-        </#if>            
+            name="vm"
+            type="${packageName}.viewmodel.${viewmodelName}"/>   
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

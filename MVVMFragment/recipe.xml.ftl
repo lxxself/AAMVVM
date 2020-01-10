@@ -5,10 +5,8 @@
 	<instantiate from="root/res/layout/databinding.xml.ftl"
                    to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 
-    <#if generateViewModel>  
     <instantiate from="root/src/app_package/viewmodel/ViewModel.${ktOrJavaExt}.ftl"
                    to="${escapeXmlAttribute(customSrcOut)}/viewmodel/${shortName}ViewModel.${ktOrJavaExt}" />
-    </#if>
     
     <instantiate from="root/src/app_package/VMFragment.${ktOrJavaExt}.ftl"
                    to="${escapeXmlAttribute(customSrcOut)}/${fragmentClass}.${ktOrJavaExt}" />

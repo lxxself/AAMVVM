@@ -1,6 +1,3 @@
-/**
- * generate by AAMVVM: https://github.com/HeadingMobile/AAMVVM
- */
 package ${packageName}.viewmodel;
 
 /**

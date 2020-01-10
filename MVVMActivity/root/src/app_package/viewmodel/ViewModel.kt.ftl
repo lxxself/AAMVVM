@@ -1,6 +1,3 @@
-/**
- * generate by AAMVVM: https://github.com/HeadingMobile/AAMVVM
- */
 package ${packageName}.viewmodel
 
 /**
@@ -11,6 +8,6 @@ package ${packageName}.viewmodel
  * @date ${.now?string("yyyy/MM/dd")}
  */
 
-class ${viewmodelName} constructor(): BaseViewModel(){
+class ${viewmodelName} : BaseViewModel(){
     
 }

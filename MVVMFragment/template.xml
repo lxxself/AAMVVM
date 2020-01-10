@@ -35,16 +35,9 @@
         name="Layout Name"
         type="string"
         constraints="layout|unique|nonempty"
-        suggest="${camelCaseToUnderscore(shortName)}_fragment"
+        suggest="fragment_${camelCaseToUnderscore(shortName)}"
         default="main_fragment"
         help="The name of the layout to create for the fragment" />
-
-    <parameter
-        id="generateViewModel"
-        name="need Generate viewmodel File"
-        type="boolean"
-        default="true" 
-        help="如果不勾选，不会生成viewmodel" />
 
     <parameter
         id="viewmodelName"
@@ -52,7 +45,6 @@
         type="string"
         constraints="unique|nonempty"
         suggest="${shortName}ViewModel"
-        visiblity="generateViewModel"
         default="MainViewModel"
         help="The name of the viewmodel class to create" />
 
